@@ -1,0 +1,25 @@
+{
+  "name": "StoryWebServer",
+  "version": "1.0.0",
+  "description": "story server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dacuotecuo/StoryWebServer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dacuotecuo/StoryWebServer/issues"
+  },
+  "homepage": "https://github.com/dacuotecuo/StoryWebServer#readme",
+  "dependencies": {
+    "express": "4.16.4",
+    "redis": "2.8.0",
+    "winston": "3.1.0"
+  }
+}
