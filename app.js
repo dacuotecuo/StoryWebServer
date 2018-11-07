@@ -18,7 +18,7 @@ const log   = require('./lib/log');
 require('./lib/error').listen();
 
 //用户相关
-app.use('/user', require('./routes/user'));
+app.use('/user', require('./mid/d'), require('./routes/user'));
 
 //故事相关
 app.use('/story', require('./routes/story'));
