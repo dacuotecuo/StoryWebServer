@@ -18,14 +18,9 @@ exports = module.exports = function(req, res, next) {
     const client =  (req.query.k || '').toLowerCase();
 
     //无效的加密方式
-    if (!ens[client]) {
-        
-        return res.end(204);      
-
-    }
+    if (!ens[client]) return res.end(204);      
 
     const { key, vi } = ens[client];
-
     
     try {
 
@@ -45,6 +40,5 @@ exports = module.exports = function(req, res, next) {
 
         return res.end(204);
     }
-    
     next();
 };

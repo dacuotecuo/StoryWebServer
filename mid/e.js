@@ -18,6 +18,11 @@ const { ens } = require('../conf/conf.json');
 module.exports = function (req, res, next) {
 
     const { response }  = res.locals;
-    const key           =  (req.query.k || '').toLowerCase();
+    const client        =  (req.query.k || '').toLowerCase();
     const { key, vi }   = ens[key];
+
+    const sign = com.sign(JSON.stringify(response), key);
+    const data = com.encrypt(JSON.stringify(response), key, vi, 0);
+
+    return res.send(`d=${data}&s=${sign}&k=${client}`);
 };
