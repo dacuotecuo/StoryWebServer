@@ -29,10 +29,7 @@ exports = module.exports = function(req, res, next) {
 
         const json = JSON.parse(dd);
 
-        if (s_s !== sign) {
-
-            return res.end(204);
-        }
+        if (s_s !== sign) return res.end(204);
 
         res.locals.data = json;
 
