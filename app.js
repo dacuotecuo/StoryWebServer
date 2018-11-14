@@ -20,6 +20,14 @@ const log   = require('./lib/log');
 //全局异常监听
 require('./lib/error').listen();
 
+app.use('/', function () {
+    res.send('interface not found');
+});
+
+app.use('/test', function (req, res) {
+    res.send('test');
+});
+
 //用户相关
 app.use('/user', d, require('./routes/user'), e);
 
