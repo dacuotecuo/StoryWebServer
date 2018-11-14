@@ -20,7 +20,7 @@ const log   = require('./lib/log');
 //全局异常监听
 require('./lib/error').listen();
 
-app.use('/', function () {
+app.use('/', function (req, res) {
     res.send('interface not found');
 });
 
