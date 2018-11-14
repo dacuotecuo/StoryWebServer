@@ -1,3 +1,4 @@
 /node_modules
 /conf/conf.json
 /package-lock.json
+/.vscode
