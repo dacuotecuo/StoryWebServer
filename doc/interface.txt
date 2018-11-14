@@ -1,0 +1,227 @@
+以下接口均是DES加密接口，详情请参照DES
+
+1.获取一个时间段的故事列表
+/story/getHomeLists
+input：
+{
+    "startTime": "2018-11-14 20:00:00 000",
+    "endTime": "2018-11-14 20:00:00 000",
+    "offSet": 10,
+    "count": 5
+}
+
+output:
+{
+    "total": 50,
+    "list": [{
+        "storyID": "story0000001",
+        "ownerName": '西窗不眠',
+        "isOriginal": "1",
+        "ownerID": "shenziqi",
+        "headerImageUrl": "https://avatars3.githubusercontent.com/u/6777479?s=460&v=4",
+        "creatTime": "2018-11-14 19:34:35 632",
+        "storyTitle": "普通故事",
+        "commentNum": 15,
+        "thumbsUpNum": 352,
+        "outlines": [{
+            "type": "text",
+            "content": "第一段第一个素材?n悲哀！n悲哀！n悲哀！n悲哀！n悲哀！"
+        },
+        {
+            "type": "pic",
+            "content": "https://img1.doubanio.com/view/photo/albumcover/public/p2519255768.jpg",
+            "width": 170,
+            "height": 170
+        },
+        {
+            "type": "text",
+            "content": "第一段结尾"
+        }],
+        "particulars": [{
+            "type": "text",
+            "content": "第二段开头"
+        },
+        {
+            "type": "pic",
+            "content": "https://img3.doubanio.com/view/photo/albumcover/public/p2519057573.jpg",
+            "width": 170,
+            "height": 170
+        },
+        {
+            "type": "text",
+            "content": "第二段结尾n换一行"
+        }]
+    },{
+        "ownerName": '西窗不眠',
+        "isOriginal": "1",
+        "ownerID": "shenziqi",
+        "headerImageUrl": "https://avatars3.githubusercontent.com/u/6777479?s=460&v=4",
+        "creatTime": "2018-11-14 19:34:35 632",
+        "storyTitle": "普通故事",
+        "commentNum": 15,
+        "thumbsUpNum": 352,
+        "outlines": [{
+            "type": "text",
+            "content": "第一段第一个素材?n悲哀！n悲哀！n悲哀！n悲哀！n悲哀！"
+        },
+        {
+            "type": "pic",
+            "content": "https://img1.doubanio.com/view/photo/albumcover/public/p2519255768.jpg",
+            "width": 170,
+            "height": 170
+        },
+        {
+            "type": "text",
+            "content": "第一段结尾"
+        }],
+        "particulars": [{
+            "type": "text",
+            "content": "第二段开头"
+        },
+        {
+            "type": "pic",
+            "content": "https://img3.doubanio.com/view/photo/albumcover/public/p2519057573.jpg",
+            "width": 170,
+            "height": 170
+        },
+        {
+            "type": "text",
+            "content": "第二段结尾n换一行"
+        }]
+    },{
+        "ownerName": '西窗不眠',
+        "isOriginal": "1",
+        "ownerID": "shenziqi",
+        "headerImageUrl": "https://avatars3.githubusercontent.com/u/6777479?s=460&v=4",
+        "creatTime": "2018-11-14 19:34:35 632",
+        "storyTitle": "普通故事",
+        "commentNum": 15,
+        "thumbsUpNum": 352,
+        "outlines": [{
+            "type": "text",
+            "content": "第一段第一个素材?n悲哀！n悲哀！n悲哀！n悲哀！n悲哀！"
+        },
+        {
+            "type": "pic",
+            "content": "https://img1.doubanio.com/view/photo/albumcover/public/p2519255768.jpg",
+            "width": 170,
+            "height": 170
+        },
+        {
+            "type": "text",
+            "content": "第一段结尾"
+        }],
+        "particulars": [{
+            "type": "text",
+            "content": "第二段开头"
+        },
+        {
+            "type": "pic",
+            "content": "https://img3.doubanio.com/view/photo/albumcover/public/p2519057573.jpg",
+            "width": 170,
+            "height": 170
+        },
+        {
+            "type": "text",
+            "content": "第二段结尾n换一行"
+        }]
+    },{
+        "ownerName": '西窗不眠',
+        "isOriginal": "1",
+        "ownerID": "shenziqi",
+        "headerImageUrl": "https://avatars3.githubusercontent.com/u/6777479?s=460&v=4",
+        "creatTime": "2018-11-14 19:34:35 632",
+        "storyTitle": "普通故事",
+        "commentNum": 15,
+        "thumbsUpNum": 352,
+        "outlines": [{
+            "type": "text",
+            "content": "第一段第一个素材?n悲哀！n悲哀！n悲哀！n悲哀！n悲哀！"
+        },
+        {
+            "type": "pic",
+            "content": "https://img1.doubanio.com/view/photo/albumcover/public/p2519255768.jpg",
+            "width": 170,
+            "height": 170
+        },
+        {
+            "type": "text",
+            "content": "第一段结尾"
+        }],
+        "particulars": [{
+            "type": "text",
+            "content": "第二段开头"
+        },
+        {
+            "type": "pic",
+            "content": "https://img3.doubanio.com/view/photo/albumcover/public/p2519057573.jpg",
+            "width": 170,
+            "height": 170
+        },
+        {
+            "type": "text",
+            "content": "第二段结尾n换一行"
+        }]
+    },{
+        "ownerName": '西窗不眠',
+        "isOriginal": "1",
+        "ownerID": "shenziqi",
+        "headerImageUrl": "https://avatars3.githubusercontent.com/u/6777479?s=460&v=4",
+        "creatTime": "2018-11-14 19:34:35 632",
+        "storyTitle": "普通故事",
+        "commentNum": 15,
+        "thumbsUpNum": 352,
+        "outlines": [{
+            "type": "text",
+            "content": "第一段第一个素材?n悲哀！n悲哀！n悲哀！n悲哀！n悲哀！"
+        },
+        {
+            "type": "pic",
+            "content": "https://img1.doubanio.com/view/photo/albumcover/public/p2519255768.jpg",
+            "width": 170,
+            "height": 170
+        },
+        {
+            "type": "text",
+            "content": "第一段结尾"
+        }],
+        "particulars": [{
+            "type": "text",
+            "content": "第二段开头"
+        },
+        {
+            "type": "pic",
+            "content": "https://img3.doubanio.com/view/photo/albumcover/public/p2519057573.jpg",
+            "width": 170,
+            "height": 170
+        },
+        {
+            "type": "text",
+            "content": "第二段结尾n换一行"
+        }]
+    }]
+}
+
+
+2.获取有故事的日期天数
+/story/getDateCount
+input: {}
+
+output: {
+    "count": 5,
+    "recents": ["2018-11-14", "2018-11-13", "2018-11-12", "2018-11-09", "2018-11-08"]
+}
+
+3.获取有故事的日期
+/story/getDates
+intput
+{
+    "start": "2018-11-14",
+    "count": 5,
+    "offset": 0
+}
+
+output:
+{
+    list: ["2018-11-14", "2018-11-13", "2018-11-12", "2018-11-09", "2018-11-08"]
+}

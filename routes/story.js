@@ -9,58 +9,32 @@ const express = require('express');
 const router = express.Router();
 const redis = require('../data/redis');
 
-/**
- * 获取一篇故事内容
- */
-router.get('/get_story', function (req, res, next) {
+//获取一个时间段内的故事
+router.get('/getHomeLists', function (req, res, next) {
     
     const { data } = res.locals;
 
-    console.log(data);
+    res.locals.response = require('../demos/getHomeLists.json');
 
-    res.locals.response = {
-        "owner": 'shenziqi',
-        "ownerID": "sto_user00001",
-        "headerImageUrl": "https://avatars3.githubusercontent.com/u/6777479?s=460&v=4",
-        "creatTime": "2018-11-14 19:34:35 632",
-        "storyTitle": "普通故事",
-        "isOriginal": "1",
-        "name": "西窗不眠",
-        "story": [
-            {
-                "section": [
-                    {
-                        "type": "text",
-                        "content": "第一段第一个素材?n悲哀！n悲哀！n悲哀！n悲哀！n悲哀！"
-                    },
-                    {
-                        "type": "pic",
-                        "content": "https://img1.doubanio.com/view/photo/albumcover/public/p2519255768.jpg"
-                    },
-                    {
-                        "type": "text",
-                        "content": "第一段结尾"
-                    }
-                ]
-            },
-            {
-                "section": [
-                    {
-                        "type": "text",
-                        "content": "第二段开头"
-                    },
-                    {
-                        "type": "pic",
-                        "content": "https://img3.doubanio.com/view/photo/albumcover/public/p2519057573.jpg"
-                    },
-                    {
-                        "type": "text",
-                        "content": "第二段结尾n换一行"
-                    }
-                ]
-            }
-        ]
-    };
+    next();
+});
+
+//获取有故事的日期天数
+router.get('/getDateCount', function (req, res, next) {
+
+    const { data } = res.locals;
+
+    res.locals.response = require('../demos/getDateCount.json');
+    
+    next();
+});
+
+//获取所有有日期的故事列表
+router.get('/getDates', function (req, res, next) {
+
+    const { data } = res.locals;
+
+    res.locals.response = require('../demos/getDates.json');
     next();
 });
 
