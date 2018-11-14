@@ -11,10 +11,10 @@ const path      = require('path');
 const app       = express();
 const d         = require('./mid/d');
 const e         = require('./mid/e');
+const { server_ip } = require('./conf/conf.json');
 
 const port  = process.env.PORT  || 10080;
-// const ip    = process.env.IP || '0.0.0.0';
-const ip    = process.env.IP || '127.0.0.1';
+const ip    = process.env.IP || server_ip;
 const log   = require('./lib/log');
 
 
