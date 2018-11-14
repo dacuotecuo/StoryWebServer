@@ -12,8 +12,8 @@ const app       = express();
 const d         = require('./mid/d');
 const e         = require('./mid/e');
 
-const port  = process.env.PORT  || 10011;
-const ip    = process.env.IP || '127.0.0.1';
+const port  = process.env.PORT  || 8080;
+const ip    = process.env.IP || '0.0.0.0';
 const log   = require('./lib/log');
 
 
