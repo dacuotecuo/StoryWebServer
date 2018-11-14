@@ -25,17 +25,19 @@ exports = module.exports = function(req, res, next) {
     try {
 
         const d_d = common.decrypt(data, key, vi, 0);
-        const s_s = common.sign(data, key);
+        const s_s = common.sign(d_d, key);
 
-        const json = JSON.parse(dd);
+        const json = JSON.parse(d_d);
 
-        if (s_s !== sign) return res.end(204);
+        console.log(data, s_s, key, sign);
+
+        if (s_s !== sign) return res.status(204).end();
 
         res.locals.data = json;
 
     } catch (ex) {
 
-        return res.end(204);
+        return res.status(204).end();
     }
     next();
 };

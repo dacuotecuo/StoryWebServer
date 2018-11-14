@@ -13,16 +13,13 @@ const d         = require('./mid/d');
 const e         = require('./mid/e');
 
 const port  = process.env.PORT  || 10080;
-const ip    = process.env.IP || '0.0.0.0';
+// const ip    = process.env.IP || '0.0.0.0';
+const ip    = process.env.IP || '127.0.0.1';
 const log   = require('./lib/log');
 
 
 //全局异常监听
 require('./lib/error').listen();
-
-app.use('/', function (req, res) {
-    res.send('interface not found');
-});
 
 app.use('/test', function (req, res) {
     res.send('test');

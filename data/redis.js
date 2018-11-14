@@ -7,4 +7,4 @@
 'use strict';
 
 const { redis_conf } = require('../conf/conf.json');
-const redis = require("redis").createClient(redis_conf);
+// const redis = require("redis").createClient(redis_conf);
