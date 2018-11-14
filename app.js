@@ -12,7 +12,7 @@ const app       = express();
 const d         = require('./mid/d');
 const e         = require('./mid/e');
 
-const port  = process.env.PORT  || 8080;
+const port  = process.env.PORT  || 10080;
 const ip    = process.env.IP || '0.0.0.0';
 const log   = require('./lib/log');
 
