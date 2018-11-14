@@ -7,10 +7,11 @@
 'use strict';
 
 const express   = require('express');
-const path      = require('path');
 const app       = express();
 const d         = require('./mid/d');
 const e         = require('./mid/e');
+const u_d       = require('./mid/u_d');
+const u_e       = require('./mid/u_e');
 const { server_ip } = require('./conf/conf.json');
 
 const port  = process.env.PORT  || 10080;
@@ -30,6 +31,9 @@ app.use('/user', d, require('./routes/user'), e);
 
 //故事相关
 app.use('/story', d, require('./routes/story'), e);
+
+app.use('/json/user', u_d, require('./routes/user'), u_e);
+app.use('/json/story', u_d, require('./routes/story'), u_e);
 
 app.use((req, res) => {
     try { res.status(204).end();} catch(ex) { }
