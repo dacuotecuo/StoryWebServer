@@ -25,7 +25,7 @@ exports = module.exports = function(req, res, next) {
     try {
 
         const d_d = common.decrypt(data, key, vi, 0);
-        const s_s = common.sign(d_d, key);
+        const s_s = common.sign(data, key);
 
         const json = JSON.parse(d_d);
 

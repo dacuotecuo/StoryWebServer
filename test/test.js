@@ -10,7 +10,7 @@ const data = {
 
 const d = com.encrypt(JSON.stringify(data), key, vi);
 
-const s = com.sign('+HzAoHGMMuCGUNlStL4gzgv++hJjxFQ7dydQEgwc/ARsmMh4Ev7Yzw==', key);
+const s = com.sign(d, key);
 
 console.log(key, d, s)
 
