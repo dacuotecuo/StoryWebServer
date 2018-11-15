@@ -17,7 +17,7 @@ const { ens } = require('../conf/conf.json');
  */
 module.exports = function (req, res, next) {
 
-    let response = res.locals.response || '';
+    let response = res.locals.response || { msg : 'interface not exits' };
     const client =  (req.query.k || '').toLowerCase();
     const { key, vi } = ens[client];
 
