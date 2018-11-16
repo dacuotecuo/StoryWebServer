@@ -25,5 +25,7 @@ module.exports = function (req, res, next) {
     const sign = com.sign(JSON.stringify(response), key);
     const data = com.encrypt(JSON.stringify(response), key, vi, 0);
 
+    res.set('Content-Type', 'text/plain');
+
     return res.send(`d=${encodeURIComponent(data)}&s=${encodeURIComponent(sign)}&k=${client}`);
 };
