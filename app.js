@@ -13,6 +13,7 @@ const e         = require('./mid/e');
 const u_d       = require('./mid/u_d');
 const u_e       = require('./mid/u_e');
 const { server_ip } = require('./conf/conf.json');
+const path      = require('path');
 
 const port  = process.env.PORT  || 10080;
 const ip    = process.env.IP || server_ip;
@@ -21,6 +22,17 @@ const log   = require('./lib/log');
 
 //全局异常监听
 require('./lib/error').listen();
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.set('view engine', 'ejs');
+
+/**
+ * 首页
+ */
+app.use('/', function (req, res) {
+    res.render('index');
+});
 
 app.use('/test', function (req, res) {
     res.send('test');

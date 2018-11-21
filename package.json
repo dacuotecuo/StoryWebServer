@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/dacuotecuo/StoryWebServer#readme",
   "dependencies": {
+    "ejs": "2.6.1",
     "express": "4.16.4",
     "redis": "2.8.0",
     "winston": "3.1.0"
