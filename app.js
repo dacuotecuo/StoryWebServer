@@ -27,13 +27,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.set('view engine', 'ejs');
 
-/**
- * 首页
- */
-app.use('/', function (req, res) {
-    res.render('index');
-});
-
 app.use('/test', function (req, res) {
     res.send('test');
 });
@@ -46,6 +39,14 @@ app.use('/story', d, require('./routes/story'), e);
 
 app.use('/json/user', u_d, require('./routes/user'), u_e);
 app.use('/json/story', u_d, require('./routes/story'), u_e);
+
+
+/**
+ * 首页
+ */
+app.use('/', function (req, res) {
+    res.render('index');
+});
 
 app.use((req, res) => {
     try { res.status(204).end();} catch(ex) { }
